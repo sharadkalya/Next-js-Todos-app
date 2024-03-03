@@ -127,10 +127,10 @@ const TodoForm = (props) => {
 
 }
 
-export { TodoForm };
-
 TodoForm.propTypes = {
     id: propTypes.number,
     onSubmit: propTypes.func,
     onCancel: propTypes.func,
 };
+
+export { TodoForm };
