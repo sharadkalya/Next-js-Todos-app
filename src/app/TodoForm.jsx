@@ -37,10 +37,10 @@ const TodoForm = (props) => {
             } else {
                 addTodo(newTodo);
             }
+            resetForm();
             if (parentOnSubmit) {
                 parentOnSubmit(newTodo);
             }
-            resetForm();
         }
     };
 
@@ -54,9 +54,11 @@ const TodoForm = (props) => {
     useEffect(() => {
         if (id) {
             const existingTodo = getTodoById(id);
-            setTitle(existingTodo.title);
-            setDescription(existingTodo.description);
-            setTodoStatus(existingTodo.status);
+            if (existingTodo) {
+                setTitle(existingTodo.title);
+                setDescription(existingTodo.description);
+                setTodoStatus(existingTodo.status);
+            }
         }
     }, [id]);
 

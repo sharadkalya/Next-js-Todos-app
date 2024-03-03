@@ -36,6 +36,7 @@ const App = () => {
     const onSubmit = () => {
         setAllTodos(getTodos());
         setOpen(false);
+        setId("");
     };
     const deleteClose = () => {
         setDeleteOpen(false);
@@ -43,6 +44,7 @@ const App = () => {
     };
     const onClose = () => {
         setOpen(false);
+        setId("");
     };
     const onEdit = (editId) => {
         setId(editId);
@@ -56,6 +58,7 @@ const App = () => {
         deleteTodoById(id);
         setDeleteOpen(false);
         setAllTodos(getTodos());
+        setId("");
     }
     const handleFilterStatus = (e) => {
         setFilterStatus(e.target.value);
