@@ -118,7 +118,7 @@ const TodoForm = (props) => {
                 <Button type="submit" onClick={onSubmit}>
                     {id ? "Update" : "Submit"}
                 </Button>
-                <Button type="submit" onClick={onCancel}>
+                <Button onClick={onCancel}>
                     Cancel
                 </Button>
             </div>
