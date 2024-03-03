@@ -16,21 +16,19 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## About the todo app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This is a very basic app that allows crud operation on todo.
+User can filter the todos list by todo status.
 
-## Learn More
+The main component is App.jsx
+ - It renders a button which on click opens up form to add a todo.
+ - It renders option to filter the list.
+ - It render the list of all todos.
+ - The add todo form is rendered inside a modal. This form serves the purpose of updating a todo also if it receives an id.
+ - User can delete any todo; and this component renders confirmation dialog to ensure user don't delete it by mistake.
 
-To learn more about Next.js, take a look at the following resources:
+Insetead of firebase/node I've used the localstorage as I wanted to create it as a simple react web app.
+All the operations to localStorage are done in helper.js file. This allows us to change it to firebase or node without even touching any of the component file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This basic app makes use of material ui components.
